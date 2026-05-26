@@ -126,7 +126,8 @@ server.tool(
     }
 
     try {
-      const response = await metaClient.get(`/${AD_ACCOUNT_ID}/campaigns`, {
+      const formattedAdAccountId = AD_ACCOUNT_ID.startsWith("act_") ? AD_ACCOUNT_ID : `act_${AD_ACCOUNT_ID}`;
+      const response = await metaClient.get(`/${formattedAdAccountId}/campaigns`, {
         params: {
           fields: "id,name,status,objective,daily_budget,lifetime_budget,budget_remaining",
         },
