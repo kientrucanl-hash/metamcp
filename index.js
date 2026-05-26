@@ -52,6 +52,18 @@ function formatVND(amount) {
     .trim();
 }
 
+// Helper to parse Meta API budget (VND accounts return raw value, USD/EUR return cents)
+function parseMetaBudget(amountStr) {
+  if (!amountStr) return 0;
+  const amount = parseInt(amountStr);
+  // If the value is >= 10000, it is highly likely a raw VND/JPY currency value from Meta.
+  // Otherwise, it is returned in cents (like USD/EUR) and needs to be divided by 100.
+  if (amount >= 10000) {
+    return amount;
+  }
+  return amount / 100;
+}
+
 console.error(
   isMockMode
     ? "[Meta MCP Server] RUNNING IN MOCK/SANDBOX MODE (No Meta Access Token configured)"
@@ -120,15 +132,15 @@ server.tool(
         },
       });
 
-      // Format response budgets for display
+      // Format response budgets for display using smart parsing
       const formattedCampaigns = response.data.data.map((c) => ({
         id: c.id,
         name: c.name,
         status: c.status,
         objective: c.objective,
-        daily_budget: c.daily_budget ? formatVND(parseInt(c.daily_budget) / 100) : "N/A",
-        lifetime_budget: c.lifetime_budget ? formatVND(parseInt(c.lifetime_budget) / 100) : "N/A",
-        budget_remaining: c.budget_remaining ? formatVND(parseInt(c.budget_remaining) / 100) : "N/A",
+        daily_budget: c.daily_budget ? formatVND(parseMetaBudget(c.daily_budget)) : "N/A",
+        lifetime_budget: c.lifetime_budget ? formatVND(parseMetaBudget(c.lifetime_budget)) : "N/A",
+        budget_remaining: c.budget_remaining ? formatVND(parseMetaBudget(c.budget_remaining)) : "N/A",
       }));
 
       return {
