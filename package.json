@@ -1,0 +1,19 @@
+{
+  "name": "meta-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server to interact with Meta Ads and Meta Messenger/WhatsApp APIs",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "meta-mcp-server": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  }
+}

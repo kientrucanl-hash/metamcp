@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Quyền riêng tư | ANLAA_APP_V1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent: #1877f2;
+            --accent-hover: #1664d4;
+            --border: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --glow: rgba(24, 119, 242, 0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #0f172a;
+                --bg-secondary: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+                --glow: rgba(24, 119, 242, 0.15);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 40px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, var(--accent), #00c6ff);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 16px;
+            box-shadow: 0 10px 20px var(--glow);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(to right, var(--text-primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 6px;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 40px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-placeholder">A</div>
+        <h1>Chính sách Quyền riêng tư</h1>
+        <div class="subtitle">Áp dụng cho ứng dụng ANLAA_APP_V1 và các dịch vụ tích hợp Meta</div>
+        <div class="meta-info">
+            <span>Phiên bản: 1.0.0</span>
+            <span>Cập nhật mới nhất: 26 tháng 05 năm 2026</span>
+        </div>
+    </header>
+
+    <div class="card">
+        <h2>1. Giới thiệu</h2>
+        <p>Chào mừng bạn đến với ứng dụng <strong>ANLAA_APP_V1</strong> và các dịch vụ tích hợp Meta (bao gồm Meta Ads, Messenger, WhatsApp Platform) được vận hành bởi <strong>CÔNG TY TNHH KIẾN TRÚC ANL VÀ CỘNG SỰ</strong> (sau đây gọi tắt là "Chúng tôi"). Chúng tôi cam kết bảo vệ tuyệt đối quyền riêng tư và dữ liệu cá nhân của người dùng.</p>
+        <p>Chính sách Quyền riêng tư này giải thích cách chúng tôi thu thập, sử dụng, tiết lộ và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng hoặc dịch vụ được kết nối với Meta APIs của chúng tôi.</p>
+
+        <h2>2. Thông tin Chúng tôi Thu thập</h2>
+        <p>Khi bạn tương tác với hệ thống tích hợp Meta của chúng tôi (ví dụ: gửi tin nhắn qua Fanpage Messenger, WhatsApp hoặc cho phép kết nối tài khoản quảng cáo), chúng tôi có thể thu thập các nhóm thông tin sau:</p>
+        <ul>
+            <li><strong>Thông tin định danh Meta (Page-Scoped ID - PSID):</strong> Mã định danh duy nhất do Meta cấp cho cuộc trò chuyện giữa bạn và Trang (Page) của chúng tôi.</li>
+            <li><strong>Thông tin liên hệ:</strong> Số điện thoại đối với dịch vụ WhatsApp, hoặc tên hiển thị trên trang cá nhân công khai theo cấu hình quyền hạn của Meta.</li>
+            <li><strong>Nội dung tương tác:</strong> Nội dung tin nhắn văn bản, hình ảnh hoặc tài liệu bạn gửi tới các kênh hỗ trợ của chúng tôi nhằm mục đích xử lý yêu cầu.</li>
+            <li><strong>Dữ liệu Chiến dịch & Tài khoản Quảng cáo (Nếu có kết nối Ads API):</strong> Các thông tin về ngân sách chiến dịch, số lượt click, chi phí, hoặc số lượt hiển thị mà bạn yêu cầu hệ thống của chúng tôi truy vấn và tối ưu hóa.</li>
+        </ul>
+
+        <h2>3. Cách Chúng tôi Sử dụng Thông tin</h2>
+        <p>Chúng tôi chỉ sử dụng dữ liệu thu thập được cho các mục đích hợp pháp sau đây:</p>
+        <ul>
+            <li>Phản hồi các câu hỏi, cung cấp dịch vụ hỗ trợ khách hàng tự động hoặc trực tuyến qua Messenger và WhatsApp.</li>
+            <li>Thực hiện các thao tác quản lý chiến dịch quảng cáo và báo cáo hiệu quả chiến dịch theo lệnh yêu cầu trực tiếp từ bạn qua MCP Server.</li>
+            <li>Đảm bảo an toàn hệ thống, phòng ngừa các hành vi spam hoặc phá hoại giả mạo.</li>
+        </ul>
+
+        <h2>4. Chia sẻ và Bảo mật Dữ liệu</h2>
+        <p>Chúng tôi cam kết <strong>không bán, trao đổi hoặc cho thuê</strong> thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào. Dữ liệu chỉ được truyền tải trực tiếp thông qua các cổng API chính thức của Meta (Graph API) và hệ thống máy chủ an toàn của chúng tôi.</p>
+        <p>Mọi dữ liệu truyền tải đều được mã hóa bằng giao thức HTTPS/TLS tiêu chuẩn ngành. Tuy nhiên, xin lưu ý rằng không có phương thức truyền tải dữ liệu nào qua Internet là an toàn 100%, nhưng chúng tôi luôn nỗ lực áp dụng các biện pháp bảo vệ tốt nhất để giữ an toàn cho dữ liệu của bạn.</p>
+
+        <h2>5. Quyền của Người dùng</h2>
+        <p>Bạn có toàn quyền kiểm soát thông tin cá nhân của mình, bao gồm:</p>
+        <ul>
+            <li>Yêu cầu chúng tôi cung cấp thông tin chi tiết về các loại dữ liệu của bạn đang được xử lý.</li>
+            <li>Yêu cầu chỉnh sửa, cập nhật hoặc xóa bỏ hoàn toàn lịch sử tương tác cũng như thông tin cá nhân trên hệ thống của chúng tôi.</li>
+            <li>Hủy kết nối hoặc chặn (Block) Trang/Số điện thoại của chúng tôi bất kỳ lúc nào trên ứng dụng Meta của bạn để dừng việc nhận tin nhắn.</li>
+        </ul>
+
+        <h2>6. Thay đổi về Chính sách này</h2>
+        <p>Chúng tôi có thể cập nhật Chính sách Quyền riêng tư này theo thời gian để phù hợp với sự thay đổi của pháp luật hoặc các tính năng dịch vụ mới. Mọi thay đổi sẽ được cập nhật công khai tại trang này cùng thời gian cập nhật tương ứng.</p>
+
+        <h2>7. Liên hệ với Chúng tôi</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào liên quan đến Chính sách Quyền riêng tư này, hoặc muốn thực hiện quyền xóa bỏ dữ liệu cá nhân, vui lòng liên hệ:</p>
+        <p>
+            <strong>Đơn vị chủ quản:</strong> CÔNG TY TNHH KIẾN TRÚC ANL VÀ CỘNG SỰ<br>
+            <strong>Email hỗ trợ:</strong> kientruc.anl@gmail.com<br>
+            <strong>Địa chỉ văn phòng:</strong> Tầng 9, Khối C Toà nhà HỒ GƯƠM PLAZA, 102 Trần Phú, Phường Hà Đông, Thành Phố Hà Nội, Việt Nam<br>
+            <strong>Số điện thoại:</strong> +84356238989
+        </p>
+        <a href="mailto:kientruc.anl@gmail.com" class="contact-btn">Gửi Yêu Cầu Hỗ Trợ</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CÔNG TY TNHH KIẾN TRÚC ANL VÀ CỘNG SỰ. Bảo lưu mọi quyền.</p>
+        <p>Trang web này được tối ưu hóa cho mục đích kiểm duyệt ứng dụng trên Meta Developer Console.</p>
+    </footer>
+</div>
+
+</body>
+</html>
